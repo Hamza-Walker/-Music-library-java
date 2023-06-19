@@ -1,0 +1,4 @@
+[2023-06-19T07:00:48.244883] INFO: This is an informational message.
+[2023-06-19T07:00:48.249904] ERROR: This is an error message.
+[2023-06-19T07:02:10.849821] INFO: This is an informational message.
+[2023-06-19T07:02:10.853532] ERROR: This is an error message.
