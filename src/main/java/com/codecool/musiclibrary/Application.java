@@ -1,7 +1,7 @@
 package com.codecool.musiclibrary;
 
 import com.codecool.musiclibrary.model.Song;
-import com.codecool.musiclibrary.ui.MusicLibraryUi;
+import com.codecool.musiclibrary.ui.*;
 
 public class Application {
     private static final Song[] songs = {
@@ -28,7 +28,14 @@ public class Application {
     };
 
     public static void main(String[] args) {
-        MusicLibraryUi ui = new MusicLibraryUi();
+        Library library = new LibraryComponent();
+        Logger logger = new ConsoleLogger();
+        MusicLibraryUi ui = new MusicLibraryUi(library, logger);
+
+        for (Song song : songs) {
+            library.addSong(song.getName(), song.getArtist(), song.getDuration());
+        }
+
         ui.run();
     }
 }
